@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../JN-Project-10-Bank-API/.idea/JN-Project-10-Bank-API.iml" filepath="$PROJECT_DIR$/../JN-Project-10-Bank-API/.idea/JN-Project-10-Bank-API.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/argent-bank-front.iml" filepath="$PROJECT_DIR$/.idea/argent-bank-front.iml" />
     </modules>
   </component>
