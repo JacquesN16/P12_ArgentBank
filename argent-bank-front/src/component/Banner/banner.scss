@@ -1,0 +1,35 @@
+.banner {
+  height: 400px;
+  background-image: url("../Banner/bank-tree.jpeg") ;
+  background-position: 0% 33%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .banner-info {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 300px;
+    padding: 2rem;
+    text-align: left;
+    background-color: white;
+    @media (max-width: 620px) {
+      position: static;
+      height: 200px;
+      width: 270px;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0
+    }
+    .text{
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+  }
+}
