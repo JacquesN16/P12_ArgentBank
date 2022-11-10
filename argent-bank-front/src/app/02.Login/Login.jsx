@@ -1,9 +1,17 @@
 import './login.scss'
 import {useState} from "react";
 import LoginAPI from "./api";
+import { useNavigate } from "react-router-dom";
+import {route} from "../../util/route";
+import {useDispatch} from "react-redux";
+import {setUser} from "../00.Reducer/reducer";
+import {constant} from "../../util/constant";
 
 export default function Login () {
 
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
     const [username, setUsername] = useState('john@smith.mail')
     const [password, setPassword] = useState('12345')
 
@@ -12,6 +20,12 @@ export default function Login () {
         e.preventDefault()
         try{
             const res = await LoginAPI.Login(username, password)
+
+            if(res.status === 200){
+                dispatch(setUser(res.body))
+                localStorage.setItem(constant.user, res.body)
+                navigate(route.profile)
+            }
 
         } catch (err) {
             console.log(err)
