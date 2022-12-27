@@ -16,20 +16,20 @@ function App() {
     const dispatch = useDispatch()
     const user = useSelector(s => s.user)
 
-    const loadUserFromStorage = () => {
-        if (user) {
-            return
-        }
+    // const loadUserFromStorage = () => {
+    //     if (user) {
+    //         return
+    //     }
 
-        const userRes = localStorage.getItem(constant.user)
-        const newUser = JSON.parse(userRes)
+    //     const userRes = localStorage.getItem(constant.user)
+    //     const newUser = JSON.parse(userRes)
 
-        dispatch(setUser(newUser))
-    }
+    //     dispatch(setUser(newUser))
+    // }
 
-    useEffect(()=>{
-        loadUserFromStorage()
-    },[user])
+    // useEffect(()=>{
+    //     loadUserFromStorage()
+    // },[user])
 
   return (
     <div className="App">

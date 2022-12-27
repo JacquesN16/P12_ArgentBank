@@ -22,8 +22,11 @@ export default function Login () {
             const res = await LoginAPI.Login(username, password)
 
             if(res.status === 200){
+                
                 dispatch(setUser(res.body))
+
                 localStorage.setItem(constant.user, res.body)
+
                 navigate(route.profile)
             }
 
